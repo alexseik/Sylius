@@ -22,7 +22,9 @@ class GarriboukCashBundle extends Bundle
             'Garribouk\Bundle\CashBundle\Entity\NoteInterface'              => 'cash.model.note.class',
             'Garribouk\Bundle\CashBundle\Entity\NoteItemInterface'          => 'cash.model.note_item.class',
             'Garribouk\Bundle\CashBundle\Entity\CashInventoryUnitInterface' => 'cash.model.inventory_unit.class',
-            'Garribouk\Bundle\CashBundle\Entity\CustomerInterface'          => 'cash.model.customer.class'
+            'Garribouk\Bundle\CashBundle\Entity\CustomerInterface'          => 'cash.model.customer.class',
+            'Sylius\Bundle\CoreBundle\Model\ProductInterface'         => 'sylius.model.product.class',
+            'Sylius\Bundle\CoreBundle\Model\VariantInterface'         => 'sylius.model.variant.class'
         );
 
         $container->addCompilerPass(new ResolveDoctrineTargetEntitiesPass('sylius_core', $interfaces));

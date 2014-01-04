@@ -54,8 +54,8 @@ class DefaultController extends Controller
                     );
             }
 
-            $format = $this->getRequest()->getRequestFormat();
-
+            //$format = $this->getRequest()->getRequestFormat();
+            $format = "json";
 
             return $this->render('GarriboukCashBundle:Respuestas:product.'.$format.'.twig', array('data' => $array));
         }
@@ -116,8 +116,8 @@ class DefaultController extends Controller
                 );
             }
 
-            $format = $this->getRequest()->getRequestFormat();
-
+            //$format = $this->getRequest()->getRequestFormat();
+            $format = "json";
 
             return $this->render('GarriboukCashBundle:Respuestas:customer.'.$format.'.twig', array('data' => $array));
       }

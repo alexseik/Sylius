@@ -105,3 +105,8 @@ sylius_resource:
             driver: doctrine/orm
             classes:
                 model: Sylius\Bundle\CoreBundle\Model\Group
+        ## Garribouk resources ###
+        cash.customer:
+            driver: doctrine/orm
+            classes:
+                model: Garribouk\Bundle\CashBundle\Entity\Customer
