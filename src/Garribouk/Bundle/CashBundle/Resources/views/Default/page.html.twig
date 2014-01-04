@@ -1,0 +1,141 @@
+{% extends 'SyliusWebBundle:Backend:layout.html.twig' %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.css" type="text/css" />
+    {% stylesheets output='assets/compiled/backend.css' filter='cssrewrite'
+        '@SyliusWebBundle/Resources/assets/css/backend.css'
+        '@SyliusWebBundle/Resources/assets/css/blueimp-gallery.css'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/backgrid.css'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/extensions/filter/backgrid-filter.css'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/extensions/paginator/backgrid-paginator.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block topbar %}
+<ol class="breadcrumb">
+    <li>{{ 'garribouk.backend.breadcrumb.cash'|trans }}</li>    
+    <li>{{ 'garribouk.backend.breadcrumb.new'|trans }}</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1><i class="glyphicon glyphicon-inbox"></i> {{ 'garribouk.backend.new.ticket_title'|trans|raw }}</h1>
+</div>
+<div class="row">
+    <div class="col-md-6">        
+        <div class="row"> 
+            
+            <div class="panel panel-default">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ 'garribouk.backend.note_grid.title'|trans|raw}}</h3>                            
+                        </div>
+                        <div class="col-md-12">
+                                <div id="total"> total: 0.0 </div>
+                                <div id="num_item"> items: 0 </div>
+                                <div id="discount"> descuento total: 0.0 </div>
+                        </div>                       
+                    </div>
+                    <div class="row">
+                        <div class="panel-body">
+                            <div id="note-grid"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <button id="new_item_button" type="button" class="btn btn-warning">{{'garribouk.backend.note_grid.insert_button'|trans|raw}}</button>
+                            <button type="button" class="btn btn-danger pull-right">{{'garribouk.backend.note_grid.cancel_button'|trans|raw}}</button>
+                            <button id="new_print_button" type="button" class="btn btn-success pull-right">{{'garribouk.backend.note_grid.print_button'|trans|raw}}</button>
+                            <button id="new_save_button" type="button" class="btn btn-primary pull-right">{{'garribouk.backend.note_grid.save_button'|trans|raw}}</button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">                
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseCustomer">
+                    {{ 'garribouk.backend.note_grid.customer_title'|trans|raw}}
+                </a
+                {#<span id="customer"></span>#}
+            </h4>
+              <div id="customer" style="float: right">{{'garribouk.backend.note_grid.customer_name'|trans|raw}}</div>
+          </div>
+          <div class="panel-body">
+              <div id="collapseCustomer" class="panel-collapse collapse">
+                  {#<div id="backgrid_customers"></div>#}
+                  <div id="customer-grid"></div>
+              </div>            
+          </div>
+        </div>
+        
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">                
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    {{ 'garribouk.backend.note_grid.search_product_title'|trans|raw}}
+                </a
+            </h4>
+          </div>
+          <div class="panel-body">
+              <div id="collapseTwo" class="panel-collapse collapse">
+                  <div id="variant-grid"></div>                      
+              </div>            
+          </div>
+        </div>
+        </div>
+    </div>
+</div>    
+
+
+
+
+
+{% endblock %}
+
+{# javascripts... #}
+{% block javascripts %}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var noteUrl = "{{ path('cash_notes_all') }}";
+        var productUrl = "{{ path('cash_page_products_search') }}";
+        var customerUrl = "{{ path('cash_page_customers_search')}}";
+        //]]>
+    </script>
+    {% javascripts output='assets/compiled/backend.js'            
+        
+        '@SyliusWebBundle/Resources/assets/js/jquery.blueimp-gallery.min.js'
+        '@SyliusWebBundle/Resources/assets/js/confirm-modal.js'
+        '@SyliusWebBundle/Resources/assets/js/form-collection.js'
+        '@SyliusWebBundle/Resources/assets/js/form-spinner.js'
+        '@SyliusWebBundle/Resources/assets/js/select2.js'
+        '@SyliusWebBundle/Resources/assets/js/backend.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backbone/underscore_1.5.2.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backbone/backbone_1.1.0.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backbone/backbone-pageable.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backbone/backbone-relational_0.8.6.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backbone/backbone-validation.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/backgrid.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/extensions/filter/backgrid-filter.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/backgrid/extensions/paginator/backgrid-paginator.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/models.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/views.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/grids.js'
+        '@GarriboukCashBundle/Resources/public/assets/js/app-caja.js'
+        
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+

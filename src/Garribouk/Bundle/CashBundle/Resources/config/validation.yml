@@ -1,0 +1,19 @@
+Garribouk\Bundle\CashBundle\Entity\Customer:
+    properties:
+        fiscalid:
+            - NotBlank
+        firstname:
+            - NotBlank
+        lastname:
+            - NotBlank
+## TODO Rellenar validation
+Garribouk\Bundle\CashBundle\Entity\Note:
+    properties:
+        customer: 
+            - Valid: ~
+        currency:
+            - EqualTo:
+                value: EUR
+      
+Garribouk\Bundle\CashBundle\Entity\NoteItem:
+    getters:

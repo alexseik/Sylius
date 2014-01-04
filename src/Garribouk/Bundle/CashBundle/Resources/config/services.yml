@@ -1,0 +1,34 @@
+parameters:
+    cash.model.note.class: Garribouk\Bundle\CashBundle\Entity\Note
+    cash.model.note_item.class : Garribouk\Bundle\CashBundle\Entity\NoteItem
+    cash.model.inventory_unit.class : Garribouk\Bundle\CashBundle\Entity\CashInventoryUnit
+    cash.model.customer.class : Garribouk\Bundle\CashBundle\Entity\Customer
+    cash.form.type.note.class: Garribouk\Bundle\CashBundle\Form\Type\NoteType
+    cash.form.type.note_item.class: Garribouk\Bundle\CashBundle\Form\Type\NoteItemType
+    cash.form.type.customer.class: Garribouk\Bundle\CashBundle\Form\Type\CustomerType
+
+services:
+
+#    cash.form.type.customer:
+#      class: "%cash.form.type.customer.class%"
+#      arguments:    ["%cash.model.customer.class%"]
+#      tags:
+#            -  { name: form.type, alias: cash_customer }
+#
+#    cash.form.type.note:
+#      class: "%cash.form.type.note.class%"
+#      arguments:    ["%cash.model.note.class%","%sylius.validation_group.order%"]
+#      tags:
+#            -  { name: form.type, alias: cash_note }
+#            
+#            
+#    cash.form.type.note_item:
+#      class: "%cash.form.type.note_item.class%"
+#      arguments:    ["%cash.model.note_item.class%","%sylius.validation_group.order_item%"]
+#      tags:
+#            -  { name: form.type, alias: cash_note }
+            
+            
+#   garribouk_caja_core.example:
+#        class: %garribouk_caja_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

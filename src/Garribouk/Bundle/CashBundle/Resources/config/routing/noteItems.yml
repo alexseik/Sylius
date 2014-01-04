@@ -1,0 +1,31 @@
+cash_noteItems_all:
+    path:  /noteItems
+    defaults: { _controller: GarriboukCashBundle:NoteItems:all, _format: ~ }
+    requirements:
+        _method: GET
+        
+        
+cash_noteItems_get:
+    path:  /noteItems/{id}
+    defaults: { _controller: GarriboukCashBundle:NoteItems:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+        
+cash_noteItems_new:
+    path:  /noteItems
+    defaults: { _controller: GarriboukCashBundle:NoteItems:new, _format: ~ }
+    requirements:
+        _method: POST
+
+cash_noteItems_edit:
+    path:  /noteItems/{id}
+    defaults: { _controller: GarriboukCashBundle:NoteItems:edit, _format: ~ }
+    requirements:
+        _method: PUT
+
+cash_noteItems_delete:
+    path:  /noteItems/{id}
+    defaults: { _controller: GarriboukCashBundle:NoteItems:remove, _format: ~ }
+    requirements:
+        _method: DELETE

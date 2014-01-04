@@ -1,0 +1,39 @@
+Garribouk\Bundle\CashBundle\Entity\Customer:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        firstName:
+            expose: true
+        lastName:
+            expose: true
+        createdAt:
+            expose: true
+        updatedAt:
+            expose: true
+        currency:
+            expose: true           
+        notes:
+            expose: true
+        fiscalid:
+            expose: true
+            
+Garribouk\Bundle\CashBundle\Entity\Note:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        firstName:
+            expose: true
+        lastName:
+            expose: true
+        createdAt:
+            expose: true
+        updatedAt:
+            expose: true
+        currency:
+            expose: true           
+        notes:
+            expose: true
+        fiscalid:
+            expose: true

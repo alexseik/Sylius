@@ -1,0 +1,23 @@
+################## SYLIUS OVERWRITE #####################################3
+sylius.logo: "MAYI"
+sylius.shop_by: "Garribouk"
+sylius.homepage.splash.headline: "Mayi Bookshop"
+sylius.homepage.splash.subheadline: "All kind of books for study"
+sylius.meta.frontend_description: "Librería de barrio para todos los gustos"
+sylius.meta.frontend_keywords: "libro,texto,material escolar,colegio,oficina,consumible,fotocopia"
+
+###################  Garribouk  ##################################33#####
+garribouk.caja.frontend_title: "Libreria Papelería MAYI"
+garribouk.backend.menu.sidebar.cash: "Cash Out"
+garribouk.backend.new.ticket_title: "New Cash Ticket"
+garribouk.backend.breadcrumb.cash: "Cash Ticket"
+garribouk.backend.breadcrumb.new: "New"
+
+garribouk.backend.note_grid.title: "New Note"
+garribouk.backend.note_grid.customer_title: "Customer"
+garribouk.backend.note_grid.search_product_title: "Search Products"
+garribouk.backend.note_grid.save_button: "Save"
+garribouk.backend.note_grid.cancel_button: "Cancel"
+garribouk.backend.note_grid.print_button: "Print"
+garribouk.backend.note_grid.insert_button: "New Line"
+garribouk.backend.note_grid.customer_name: "Select a Customer"

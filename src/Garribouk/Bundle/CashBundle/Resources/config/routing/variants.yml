@@ -1,0 +1,7 @@
+
+cash_variants_patch:
+    pattern:  /variants/{id}
+    defaults: { _controller: AcmeDemoBundle:Variants:patch, _format: ~ }
+    requirements:
+        _method: PATCH
+

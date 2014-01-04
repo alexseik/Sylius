@@ -1,0 +1,61 @@
+#garribouk_caja_core_homepage:
+#    path:  /hello/{name}
+#    defaults: { _controller: GarriboukCajaCoreBundle:Default:index }
+
+#noteItems:
+#    type:     rest
+#    resource: Garribouk\Caja\CoreBundle\Controller\CashItemNoteController
+##    name_prefix: caja_note_item
+
+
+#caja_notes_index:
+#    path: /caja/api
+
+#    type:     rest
+#    resource: Garribouk\Bundle\CashBundle\Controller\NotesController
+
+
+########################## API ###############################
+cash_notes_all:
+    path:  /notes
+    defaults: { _controller: GarriboukCashBundle:Notes:all, _format: ~ }
+    requirements:
+        _method: GET
+        
+        
+cash_notes_get:
+    path:  /notes/{id}
+    defaults: { _controller: GarriboukCashBundle:Notes:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: \d+
+        
+cash_notes_new:
+    path:  /notes
+    defaults: { _controller: GarriboukCashBundle:Notes:new, _format: ~ }
+    requirements:
+        _method: POST
+
+cash_notes_edit:
+    path:  /notes/{id}
+    defaults: { _controller: GarriboukCashBundle:Notes:edit, _format: ~ }
+    requirements:
+        _method: PUT
+
+cash_notes_delete:
+    path:  /notes/{id}
+    defaults: { _controller: GarriboukCashBundle:Notes:remove, _format: ~ }
+    requirements:
+        _method: DELETE
+        
+cash_notes_get_items:
+    path:  /notes/{id}/items
+    defaults: { _controller: GarriboukCashBundle:Notes:getItems, _format: ~ }
+    requirements:
+        _method: GET
+        
+cash_notes_patch:
+    pattern:  /users/{id}
+    defaults: { _controller: GarriboukCashBundle:Notes:patch, _format: ~ }
+    requirements:
+        _method: PATCH

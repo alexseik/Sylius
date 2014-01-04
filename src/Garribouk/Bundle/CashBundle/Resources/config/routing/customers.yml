@@ -1,0 +1,32 @@
+cash_customers_all:
+    path:  /customers
+    defaults: { _controller: GarriboukCashBundle:Customers:all, _format: ~ }
+    requirements:
+        _method: GET
+        
+        
+cash_customers_get:
+    path:  /customers/{id}
+    defaults: { _controller: GarriboukCashBundle:Customers:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"
+        
+cash_customers_new:
+    path:  /customers
+    defaults: { _controller: GarriboukCashBundle:Customers:new, _format: ~ }
+    requirements:
+        _method: POST
+
+cash_customers_edit:
+    path:  /customers/{id}
+    defaults: { _controller: GarriboukCashBundle:Customers:edit, _format: ~ }
+    requirements:
+        _method: PUT
+
+cash_customers_delete:
+    path:  /customers/{id}
+    defaults: { _controller: GarriboukCashBundle:Customers:remove, _format: ~ }
+    requirements:
+        _method: DELETE
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                                      http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Garribouk\Bundle\CashBundle\Entity\Note" table="cash_note">
+        
+        <many-to-one field="customer" target-entity="Garribouk\Bundle\CashBundle\Entity\CustomerInterface" inversed-by="notes">
+            <join-column name="customer_id" referenced-column-name="id" nullable="true" />
+        </many-to-one>
+        
+<!--        <many-to-one field="billingAddress" target-entity="Sylius\Bundle\AddressingBundle\Model\AddressInterface">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+            <join-column name="billing_address_id" referenced-column-name="id" nullable="true" />
+        </many-to-one>-->
+        
+        <one-to-many field="inventoryUnits" target-entity="Garribouk\Bundle\CashBundle\Entity\CashInventoryUnitInterface" mapped-by="note" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
+        
+        <field name="currency" length="3" />
+        
+    </entity>
+    
+</doctrine-mapping>

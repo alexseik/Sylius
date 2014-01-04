@@ -1,0 +1,40 @@
+
+######################### NORMAL ##################################
+cash_page:
+    path: /administration/cash/
+    defaults:
+        _controller: GarriboukCashBundle:Default:page   
+#        _sylius:
+#            template: GarriboukCashBundle:Default:page.html.twig
+#            method: createFilterPaginator
+#            arguments: [$criteria] 
+
+
+cash_page_products_search:
+    path:   cash/api/products-search
+    defaults:
+        _controller : GarriboukCashBundle:Default:searchVariant
+        _method: [GET]
+        
+cash_page_customers_search:
+    path:   cash/api/customers-search
+    defaults:
+        _controller : GarriboukCashBundle:Default:searchCustomer
+        _method: [GET]
+
+######################### API #####################################
+cash_notes_api:
+    resource: "@GarriboukCashBundle/Resources/config/routing/notes.yml"
+    prefix:   /cash/api
+    
+cash_note_items_api:
+    resource: "@GarriboukCashBundle/Resources/config/routing/noteItems.yml"
+    prefix: /cash/api
+    
+cash_customer_api:
+    resource: "@GarriboukCashBundle/Resources/config/routing/customers.yml"
+    prefix: /cash/api
+
+cash_variant_api:
+    resource: "@GarriboukCashBundle/Resources/config/routing/variants.yml"
+    prefix: /cash/api
