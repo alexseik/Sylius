@@ -1,3 +1,7 @@
+garribouk_bundle_cash:
+    resource: "@GarriboukCashBundle/Resources/config/routing.yml"
+    prefix:   /
+
 sylius_installer:
     resource: @SyliusInstallerBundle/Resources/config/routing.yml
 
