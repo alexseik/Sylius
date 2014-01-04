@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3e8acdedfafc4f76cad3cc8f0cc6201f",
+    "hash": "c34f660a6d61e46c0a81a4ee0aa16d65",
     "packages": [
         {
             "name": "athari/yalinqo",
@@ -338,16 +338,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "328357bd9eea9d671fe5fff0737f01953bfe66a0"
+                "reference": "fec965d330c958e175c39e61c3f6751955af32d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/328357bd9eea9d671fe5fff0737f01953bfe66a0",
-                "reference": "328357bd9eea9d671fe5fff0737f01953bfe66a0",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/fec965d330c958e175c39e61c3f6751955af32d0",
+                "reference": "fec965d330c958e175c39e61c3f6751955af32d0",
                 "shasum": ""
             },
             "require": {
@@ -373,7 +373,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan H. Wage",
+                    "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -400,7 +400,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-11-12 12:38:28"
+            "time": "2014-01-01 16:43:57"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -748,12 +748,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "a02f6fe3553391a84041ca11f02b781b2560b05b"
+                "reference": "c66cb666ea98d101c3650279c545081a94e47d3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/a02f6fe3553391a84041ca11f02b781b2560b05b",
-                "reference": "a02f6fe3553391a84041ca11f02b781b2560b05b",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/c66cb666ea98d101c3650279c545081a94e47d3e",
+                "reference": "c66cb666ea98d101c3650279c545081a94e47d3e",
                 "shasum": ""
             },
             "require": {
@@ -808,7 +808,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-12-26 16:09:25"
+            "time": "2013-12-30 08:57:49"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1964,12 +1964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpSnappyBundle.git",
-                "reference": "a560dc95626b1cf0222199cc00cc40b6fda687c9"
+                "reference": "68f48977816fd829911c789663e22a9a62535079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpSnappyBundle/zipball/a560dc95626b1cf0222199cc00cc40b6fda687c9",
-                "reference": "a560dc95626b1cf0222199cc00cc40b6fda687c9",
+                "url": "https://api.github.com/repos/KnpLabs/KnpSnappyBundle/zipball/68f48977816fd829911c789663e22a9a62535079",
+                "reference": "68f48977816fd829911c789663e22a9a62535079",
                 "shasum": ""
             },
             "require": {
@@ -2006,7 +2006,7 @@
                 "pdf",
                 "snappy"
             ],
-            "time": "2013-12-20 13:26:58"
+            "time": "2014-01-02 11:20:45"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -3566,12 +3566,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "0e56c1efe353be3142c90acc9aa019233b735947"
+                "reference": "92b67ee7d7a7a86015ef6949c434807b546e90a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/0e56c1efe353be3142c90acc9aa019233b735947",
-                "reference": "0e56c1efe353be3142c90acc9aa019233b735947",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/92b67ee7d7a7a86015ef6949c434807b546e90a3",
+                "reference": "92b67ee7d7a7a86015ef6949c434807b546e90a3",
                 "shasum": ""
             },
             "require": {
@@ -3611,7 +3611,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2013-12-09 21:54:42"
+            "time": "2014-01-04 14:59:33"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -4475,18 +4475,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "5176923f83a9266ab1fcc9c638081b7526fd0f7d"
+                "reference": "876afce1471228330a814ff18e6eb1382a45cc35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/5176923f83a9266ab1fcc9c638081b7526fd0f7d",
-                "reference": "5176923f83a9266ab1fcc9c638081b7526fd0f7d",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/876afce1471228330a814ff18e6eb1382a45cc35",
+                "reference": "876afce1471228330a814ff18e6eb1382a45cc35",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "phpspec/php-diff": "~1.0.0",
-                "phpspec/prophecy": "~1.0.2",
+                "phpspec/prophecy": "~1.1",
                 "symfony/console": "~2.1",
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/finder": "~2.1",
@@ -4535,20 +4535,20 @@
                 "testing",
                 "tests"
             ],
-            "time": "2013-12-26 16:48:03"
+            "time": "2014-01-03 21:48:32"
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "79d9c8bd94801bffbf9b56964f6438762da6d8cd"
+                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/79d9c8bd94801bffbf9b56964f6438762da6d8cd",
-                "reference": "79d9c8bd94801bffbf9b56964f6438762da6d8cd",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/119b07de9c592a0286cd584d6e961903ba096d8a",
+                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a",
                 "shasum": ""
             },
             "require-dev": {
@@ -4557,7 +4557,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -4590,7 +4590,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2013-08-10 11:11:45"
+            "time": "2014-01-01 21:15:36"
         }
     ],
     "aliases": [
