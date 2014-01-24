@@ -37,7 +37,7 @@ class UserType extends ProfileFormType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->addEventListener(FormEvents::PRE_BIND, function (FormEvent $event) {
+            ->addEventListener(FormEvents::PRE_SUBMIT, function (FormEvent $event) {
                 $data = $event->getData();
 
                 if (!array_key_exists('differentBillingAddress', $data) || false === $data['differentBillingAddress']) {
@@ -92,7 +92,7 @@ class UserType extends ProfileFormType
     {
         $resolver->setDefaults(array(
             'data_class'         => $this->dataClass,
-            'validation_groups'  => function(FormInterface $form) {
+            'validation_groups'  => function (FormInterface $form) {
                 $data = $form->getData();
                 $groups = array('Profile', 'sylius');
                 if ($data && !$data->getId()) {

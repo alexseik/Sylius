@@ -17,6 +17,7 @@ use Sylius\Bundle\AddressingBundle\Model\AddressInterface;
 use Sylius\Bundle\CartBundle\Model\Cart;
 use Sylius\Bundle\PaymentsBundle\Model\PaymentInterface;
 use Sylius\Bundle\PromotionsBundle\Model\CouponInterface;
+use Sylius\Bundle\PromotionsBundle\Model\PromotionInterface;
 use Sylius\Bundle\OrderBundle\Model\AdjustmentInterface;
 
 /**
@@ -83,12 +84,26 @@ class Order extends Cart implements OrderInterface
     protected $promotionCoupon;
 
     /**
+     * Order payment state.
+     *
+     * @var string
+     */
+    protected $paymentState = PaymentInterface::STATE_CHECKOUT;
+
+    /**
      * Order shipping state.
      * It depends on the status of all order shipments.
      *
      * @var string
      */
-    protected $shippingState;
+    protected $shippingState = OrderShippingStates::READY;
+
+    /**
+     * Promotions applied
+     *
+     * @var ArrayCollection
+     */
+    protected $promotions;
 
     /**
      * Constructor.
@@ -99,9 +114,7 @@ class Order extends Cart implements OrderInterface
 
         $this->inventoryUnits = new ArrayCollection();
         $this->shipments = new ArrayCollection();
-        $this->currency = 'EUR'; // @todo: Temporary
-
-        $this->shippingState = OrderShippingStates::READY;
+        $this->promotions = new ArrayCollection();
     }
 
     /**
@@ -280,8 +293,17 @@ class Order extends Cart implements OrderInterface
     public function setPayment(PaymentInterface $payment)
     {
         $this->payment = $payment;
+        $this->paymentState = $payment->getState();
 
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPaymentState()
+    {
+        return $this->paymentState;
     }
 
     /**
@@ -473,8 +495,11 @@ class Order extends Cart implements OrderInterface
      */
     public function getLastShipment()
     {
-        $last = $this->shipments->count() ? $this->shipments->first() : null;
+        if ($this->shipments->isEmpty()) {
+            return null;
+        }
 
+        $last = $this->shipments->first();
         foreach ($this->shipments as $shipment) {
             if ($shipment->getUpdatedAt() > $last->getUpdatedAt()) {
                 $last = $shipment;
@@ -499,5 +524,45 @@ class Order extends Cart implements OrderInterface
         }
 
         return false;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hasPromotion(PromotionInterface $promotion)
+    {
+        return $this->promotions->contains($promotion);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function addPromotion(PromotionInterface $promotion)
+    {
+        if (!$this->hasPromotion($promotion)) {
+            $this->promotions->add($promotion);
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removePromotion(PromotionInterface $promotion)
+    {
+        if ($this->hasPromotion($promotion)) {
+            $this->promotions->removeElement($promotion);
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPromotions()
+    {
+        return $this->promotions;
     }
 }

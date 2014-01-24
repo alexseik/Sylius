@@ -3,49 +3,40 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c34f660a6d61e46c0a81a4ee0aa16d65",
+    "hash": "e3fd513d852247ff4271d222268e58ed",
     "packages": [
         {
-            "name": "athari/yalinqo",
-            "version": "dev-master",
+            "name": "ajbdev/authorizenet-php-api",
+            "version": "v1.1.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Athari/YaLinqo.git",
-                "reference": "6b3247909e037f218cca624c561d8a47ceeed6d2"
+                "url": "https://github.com/ajbdev/authorizenet-php-api.git",
+                "reference": "ba4a652f9dee1141009be4fe5815ebee066b85eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Athari/YaLinqo/zipball/6b3247909e037f218cca624c561d8a47ceeed6d2",
-                "reference": "6b3247909e037f218cca624c561d8a47ceeed6d2",
+                "url": "https://api.github.com/repos/ajbdev/authorizenet-php-api/zipball/ba4a652f9dee1141009be4fe5815ebee066b85eb",
+                "reference": "ba4a652f9dee1141009be4fe5815ebee066b85eb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "YaLinqo/Linq.php"
+                "classmap": [
+                    "lib/",
+                    "AuthorizeNet.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Simplified BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Prokhorov"
-                }
-            ],
-            "description": "YaLinqo, a LINQ-to-objects library for PHP",
-            "homepage": "https://github.com/Athari/YaLinqo",
+            "description": "Authorize.NET PHP library with composer support",
             "keywords": [
-                "linq",
-                "linqo",
-                "query",
-                "statistic"
+                "authorize.net",
+                "ecommerce",
+                "payment"
             ],
-            "time": "2013-05-08 12:59:02"
+            "time": "2013-02-11 21:09:06"
         },
         {
             "name": "doctrine/annotations",
@@ -409,23 +400,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "c65e5a21d1db794511d11fe28918f41bd6072f8f"
+                "reference": "69fbd69b8b6136e212bdf866a502f4b4d3c110e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/c65e5a21d1db794511d11fe28918f41bd6072f8f",
-                "reference": "c65e5a21d1db794511d11fe28918f41bd6072f8f",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/69fbd69b8b6136e212bdf866a502f4b4d3c110e6",
+                "reference": "69fbd69b8b6136e212bdf866a502f4b4d3c110e6",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": ">=2.2,<2.6-dev",
+                "doctrine/dbal": ">=2.3,<2.6-dev",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
                 "symfony/doctrine-bridge": "~2.2",
                 "symfony/framework-bundle": "~2.2"
             },
             "require-dev": {
-                "doctrine/orm": "~2.2",
+                "doctrine/orm": "~2.3",
                 "symfony/validator": "~2.2",
                 "symfony/yaml": "~2.2"
             },
@@ -470,7 +461,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-11-25 17:33:45"
+            "time": "2014-01-08 13:40:06"
         },
         {
             "name": "doctrine/inflector",
@@ -665,18 +656,160 @@
             "time": "2013-11-12 12:40:13"
         },
         {
+            "name": "doctrine/phpcr-bundle",
+            "version": "1.0.0",
+            "target-dir": "Doctrine/Bundle/PHPCRBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrinePHPCRBundle.git",
+                "reference": "93b0485d5c0606742715c34b3ebe640702fc3574"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrinePHPCRBundle/zipball/93b0485d5c0606742715c34b3ebe640702fc3574",
+                "reference": "93b0485d5c0606742715c34b3ebe640702fc3574",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpcr/phpcr-implementation": "2.1.*",
+                "phpcr/phpcr-utils": "~1.0.0",
+                "symfony/doctrine-bridge": "~2.1",
+                "symfony/framework-bundle": "~2.1"
+            },
+            "require-dev": {
+                "doctrine/phpcr-odm": "1.0.*",
+                "jackalope/jackalope-jackrabbit": "1.0.*",
+                "symfony/form": "~2.1"
+            },
+            "suggest": {
+                "doctrine/data-fixtures": "if you want to use the fixture loading.",
+                "doctrine/doctrine-bundle": "when using jackalope-doctrine-dbal",
+                "doctrine/phpcr-odm": "if you want to use the odm as well. require version 1.0.*",
+                "jackalope/jackalope-doctrine-dbal": "if you want to use jackalope-doctrine-dbal. require version 1.0.*",
+                "jackalope/jackalope-jackrabbit": "if you want to connect to jackrabbit. require version 1.0.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Bundle\\PHPCRBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "Symfony DoctrinePHPCRBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "odm",
+                "persistence",
+                "phpcr"
+            ],
+            "time": "2013-10-10 21:04:03"
+        },
+        {
+            "name": "doctrine/phpcr-odm",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/phpcr-odm.git",
+                "reference": "8b5985746537f015c5e8a5319b074ae321cab4ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/phpcr-odm/zipball/8b5985746537f015c5e8a5319b074ae321cab4ad",
+                "reference": "8b5985746537f015c5e8a5319b074ae321cab4ad",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4.0",
+                "php": ">=5.3.3",
+                "phpcr/phpcr-implementation": "~2.1.0",
+                "phpcr/phpcr-utils": "~1.0.0"
+            },
+            "require-dev": {
+                "liip/rmt": "dev-master",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "jackalope/jackalope-doctrine-dbal": "~1.0.0",
+                "jackalope/jackalope-jackrabbit": "~1.0.0",
+                "symfony/yaml": "~2.0"
+            },
+            "bin": [
+                "bin/phpcrodm",
+                "bin/phpcrodm.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\ODM\\PHPCR": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                }
+            ],
+            "description": "Object-Document-Mapper for PHPCR",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "odm",
+                "phpcr"
+            ],
+            "time": "2013-12-04 16:07:15"
+        },
+        {
             "name": "friendsofsymfony/rest-bundle",
-            "version": "1.2.0",
+            "version": "1.2.2",
             "target-dir": "FOS/RestBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "7f5134b4bf868ecbff9580d15d1fce6943240653"
+                "reference": "7c81a1879c5d8a3727932674509e96b2bb7a796e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/7f5134b4bf868ecbff9580d15d1fce6943240653",
-                "reference": "7f5134b4bf868ecbff9580d15d1fce6943240653",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/7c81a1879c5d8a3727932674509e96b2bb7a796e",
+                "reference": "7c81a1879c5d8a3727932674509e96b2bb7a796e",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +872,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2013-12-21 11:56:54"
+            "time": "2014-01-16 12:08:55"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -748,12 +881,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "c66cb666ea98d101c3650279c545081a94e47d3e"
+                "reference": "da9a97314884275c77a741205bda9f86afe23ffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/c66cb666ea98d101c3650279c545081a94e47d3e",
-                "reference": "c66cb666ea98d101c3650279c545081a94e47d3e",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/da9a97314884275c77a741205bda9f86afe23ffd",
+                "reference": "da9a97314884275c77a741205bda9f86afe23ffd",
                 "shasum": ""
             },
             "require": {
@@ -808,20 +941,20 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2013-12-30 08:57:49"
+            "time": "2014-01-22 08:58:14"
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.3.8",
+            "version": "v2.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "d2bef940268e4dc5f0f050e80458169a7267813a"
+                "reference": "35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/d2bef940268e4dc5f0f050e80458169a7267813a",
-                "reference": "d2bef940268e4dc5f0f050e80458169a7267813a",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54",
+                "reference": "35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54",
                 "shasum": ""
             },
             "require": {
@@ -888,7 +1021,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2013-11-09 21:23:13"
+            "time": "2014-01-12 16:34:06"
         },
         {
             "name": "guzzle/common",
@@ -1090,17 +1223,17 @@
         },
         {
             "name": "hwi/oauth-bundle",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "target-dir": "HWI/Bundle/OAuthBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hwi/HWIOAuthBundle.git",
-                "reference": "630d61ca64dfcafd02a13b61698fa99d7ec2c74e"
+                "reference": "5f2ddfb7f7179af4d3082acdb6db029ae9241e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/630d61ca64dfcafd02a13b61698fa99d7ec2c74e",
-                "reference": "630d61ca64dfcafd02a13b61698fa99d7ec2c74e",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/5f2ddfb7f7179af4d3082acdb6db029ae9241e47",
+                "reference": "5f2ddfb7f7179af4d3082acdb6db029ae9241e47",
                 "shasum": ""
             },
             "require": {
@@ -1184,6 +1317,7 @@
                 "oauth2",
                 "odnoklassniki",
                 "qq",
+                "salesforce",
                 "security",
                 "sensio connect",
                 "sina weibo",
@@ -1198,7 +1332,7 @@
                 "yahoo",
                 "yandex"
             ],
-            "time": "2013-09-28 12:37:04"
+            "time": "2014-01-17 11:11:50"
         },
         {
             "name": "imagine/imagine",
@@ -1305,17 +1439,131 @@
             "time": "2013-12-07 10:10:39"
         },
         {
-            "name": "jdorn/sql-formatter",
-            "version": "v1.2.16",
+            "name": "jackalope/jackalope",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "8859d664737492d313c34796731b35eca851b362"
+                "url": "https://github.com/jackalope/jackalope.git",
+                "reference": "605a3fb6d83c906d19ad88b2347be9453c96a19f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/8859d664737492d313c34796731b35eca851b362",
-                "reference": "8859d664737492d313c34796731b35eca851b362",
+                "url": "https://api.github.com/repos/jackalope/jackalope/zipball/605a3fb6d83c906d19ad88b2347be9453c96a19f",
+                "reference": "605a3fb6d83c906d19ad88b2347be9453c96a19f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-libxml": "*",
+                "jackalope/jackalope-transport": "*",
+                "php": ">=5.3.2",
+                "phpcr/phpcr": "~2.1.0",
+                "phpcr/phpcr-utils": "~1.0.0"
+            },
+            "provide": {
+                "phpcr/phpcr-implementation": "2.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jackalope\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jackalope Community",
+                    "homepage": "https://github.com/jackalope/jackalope/contributors"
+                }
+            ],
+            "description": "Jackalope PHPCR library",
+            "homepage": "http://jackalope.github.io",
+            "keywords": [
+                "phpcr"
+            ],
+            "time": "2013-11-06 10:28:46"
+        },
+        {
+            "name": "jackalope/jackalope-doctrine-dbal",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jackalope/jackalope-doctrine-dbal.git",
+                "reference": "db3b622fa96b30d3095ee8b657494f21af1df044"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jackalope/jackalope-doctrine-dbal/zipball/db3b622fa96b30d3095ee8b657494f21af1df044",
+                "reference": "db3b622fa96b30d3095ee8b657494f21af1df044",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.2.0,<2.5",
+                "jackalope/jackalope": "~1.0.0",
+                "php": ">=5.3.3",
+                "phpcr/phpcr": "~2.1.0-RC1",
+                "phpcr/phpcr-utils": "~1.0.0"
+            },
+            "provide": {
+                "jackalope/jackalope-transport": "1.0.0"
+            },
+            "require-dev": {
+                "phpcr/phpcr-api-tests": "2.1.0"
+            },
+            "bin": [
+                "bin/jackalope"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jackalope\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jackalope Community",
+                    "homepage": "https://github.com/jackalope/jackalope-jackrabbit/contributors"
+                }
+            ],
+            "description": "Jackalope Transport library for Doctrine DBAL",
+            "homepage": "http://jackalope.github.io",
+            "keywords": [
+                "doctrine-dbal",
+                "phpcr",
+                "transport implementation"
+            ],
+            "time": "2013-10-10 20:12:56"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
                 "shasum": ""
             },
             "require": {
@@ -1352,7 +1600,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2013-11-27 22:51:13"
+            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "jms/metadata",
@@ -1787,23 +2035,23 @@
         },
         {
             "name": "knplabs/knp-menu",
-            "version": "dev-master",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "52c8ffd7eba8028f93ef9eece98f74b2f11c1c1f"
+                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/52c8ffd7eba8028f93ef9eece98f74b2f11c1c1f",
-                "reference": "52c8ffd7eba8028f93ef9eece98f74b2f11c1c1f",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/f8e867268f63f561c1adadd6cbb5d8524f921873",
+                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "pimple/pimple": "1.0.*",
+                "pimple/pimple": "*",
                 "silex/silex": "1.0.*",
                 "twig/twig": ">=1.2,<2.0-dev"
             },
@@ -1815,7 +2063,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -1847,33 +2095,28 @@
                 "menu",
                 "tree"
             ],
-            "time": "2013-09-16 09:46:19"
+            "time": "2012-06-10 16:20:40"
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "dev-master",
+            "version": "v1.1.2",
             "target-dir": "Knp/Bundle/MenuBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "838c4a0f9b0631b37d699d9a7ebd695707298678"
+                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/838c4a0f9b0631b37d699d9a7ebd695707298678",
-                "reference": "838c4a0f9b0631b37d699d9a7ebd695707298678",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/2fecac02614e5a006f674dd5dd754eeaeca060b9",
+                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9",
                 "shasum": ""
             },
             "require": {
-                "knplabs/knp-menu": "~2.0, >=2.0.0-beta1",
+                "knplabs/knp-menu": "~1.1",
                 "symfony/framework-bundle": "~2.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Knp\\Bundle\\MenuBundle": ""
@@ -1901,7 +2144,7 @@
             "keywords": [
                 "menu"
             ],
-            "time": "2013-12-03 00:27:28"
+            "time": "2013-05-25 10:20:03"
         },
         {
             "name": "knplabs/knp-snappy",
@@ -2236,12 +2479,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mathiasverraes/money.git",
-                "reference": "a360a69c216b0937c1fee90ac294ed0ca127f20b"
+                "reference": "a684be9b97b7489c1cb4467b6229465db29e5890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mathiasverraes/money/zipball/a360a69c216b0937c1fee90ac294ed0ca127f20b",
-                "reference": "a360a69c216b0937c1fee90ac294ed0ca127f20b",
+                "url": "https://api.github.com/repos/mathiasverraes/money/zipball/a684be9b97b7489c1cb4467b6229465db29e5890",
+                "reference": "a684be9b97b7489c1cb4467b6229465db29e5890",
                 "shasum": ""
             },
             "require": {
@@ -2283,7 +2526,7 @@
                 "Value Object",
                 "money"
             ],
-            "time": "2013-10-10 11:11:36"
+            "time": "2014-01-08 13:01:25"
         },
         {
             "name": "monolog/monolog",
@@ -2393,16 +2636,16 @@
         },
         {
             "name": "omnipay/omnipay",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omnipay/omnipay.git",
-                "reference": "4f5e82232161939c0b14f5921c092ed77980d450"
+                "reference": "3c957cb44e383378a9ba9fa604c4da502deb747e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omnipay/omnipay/zipball/4f5e82232161939c0b14f5921c092ed77980d450",
-                "reference": "4f5e82232161939c0b14f5921c092ed77980d450",
+                "url": "https://api.github.com/repos/omnipay/omnipay/zipball/3c957cb44e383378a9ba9fa604c4da502deb747e",
+                "reference": "3c957cb44e383378a9ba9fa604c4da502deb747e",
                 "shasum": ""
             },
             "require": {
@@ -2419,6 +2662,11 @@
                 "twig/twig": "~1.12"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Omnipay": "src/"
@@ -2432,6 +2680,10 @@
                 {
                     "name": "Adrian Macneil",
                     "email": "adrian@adrianmacneil.com"
+                },
+                {
+                    "name": "Omnipay Community",
+                    "homepage": "https://github.com/omnipay/omnipay/graphs/contributors"
                 }
             ],
             "description": "A framework agnostic, multi-gateway payment processing library",
@@ -2455,6 +2707,7 @@
                 "merchant",
                 "migs",
                 "mollie",
+                "multisafepay",
                 "netaxept",
                 "netbanx",
                 "pay",
@@ -2471,38 +2724,43 @@
                 "stripe",
                 "tala",
                 "tala-payments",
+                "targetpay",
                 "twocheckout",
                 "worldpay"
             ],
-            "time": "2013-09-20 23:40:41"
+            "time": "2013-10-19 17:21:33"
         },
         {
             "name": "pagerfanta/pagerfanta",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/Pagerfanta.git",
-                "reference": "9568187b789a39a3933c71e4e28b60fc2c26b70d"
+                "reference": "431c22dbc515c81379c8235e633de721e9cb74f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/9568187b789a39a3933c71e4e28b60fc2c26b70d",
-                "reference": "9568187b789a39a3933c71e4e28b60fc2c26b70d",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/431c22dbc515c81379c8235e633de721e9cb74f2",
+                "reference": "431c22dbc515c81379c8235e633de721e9cb74f2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "doctrine/mongodb-odm": "*",
-                "doctrine/orm": "2.*",
-                "mandango/mandango": "*",
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "doctrine/orm": "2.3.*",
+                "doctrine/phpcr-odm": "1.0.*",
+                "jmikola/geojson": "1.0.*",
+                "mandango/mandango": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*",
                 "propel/propel1": "~1.6",
-                "solarium/solarium": "dev-develop"
+                "solarium/solarium": "3.1.*"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
                 "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "doctrine/phpcr-odm": "To use the DoctrineODMPhpcrAdapter. >= 1.1.0",
                 "mandango/mandango": "To use the MandangoAdapter.",
                 "propel/propel1": "To use the PropelAdapter",
                 "solarium/solarium": "To use the SolariumAdapter."
@@ -2536,176 +2794,152 @@
                 "paginator",
                 "paging"
             ],
-            "time": "2013-09-23 08:06:55"
+            "time": "2014-01-06 01:39:45"
         },
         {
-            "name": "payum/omnipay-bridge",
-            "version": "0.6.0",
+            "name": "paypal/rest-api-sdk-php",
+            "version": "V0.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Payum/OmnipayBridge.git",
-                "reference": "c8460ffa596941fdc8d696fd53d649e028215110"
+                "url": "https://github.com/paypal/rest-api-sdk-php.git",
+                "reference": "9e09f7bff507e81cbb03d233c15c080fefd1d512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/OmnipayBridge/zipball/c8460ffa596941fdc8d696fd53d649e028215110",
-                "reference": "c8460ffa596941fdc8d696fd53d649e028215110",
+                "url": "https://api.github.com/repos/paypal/rest-api-sdk-php/zipball/9e09f7bff507e81cbb03d233c15c080fefd1d512",
+                "reference": "9e09f7bff507e81cbb03d233c15c080fefd1d512",
                 "shasum": ""
             },
             "require": {
-                "omnipay/omnipay": "~1.0",
-                "payum/payum": "0.6.*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Payum\\Bridge\\Omnipay": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kotlyar Maksim",
-                    "email": "kotlyar.maksim@gmail.com"
-                },
-                {
-                    "name": "Payum project",
-                    "homepage": "http://payum.forma-dev.com/"
-                },
-                {
-                    "name": "Community contributions",
-                    "homepage": "https://github.com/Payum/OmnipayBridge/contributors"
-                }
-            ],
-            "description": "This bridge allows you to use omnipay gateways but in payum like way.",
-            "homepage": "https://github.com/Payum/OmnipayBridge",
-            "keywords": [
-                "omnipay",
-                "payment"
-            ],
-            "time": "2013-10-25 13:44:56"
-        },
-        {
-            "name": "payum/paypal-express-checkout-nvp",
-            "version": "0.6.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Payum/PaypalExpressCheckoutNvp.git",
-                "reference": "5dcde1e622fe7c0b9b5dae0077fda0c08e2d555d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Payum/PaypalExpressCheckoutNvp/zipball/5dcde1e622fe7c0b9b5dae0077fda0c08e2d555d",
-                "reference": "5dcde1e622fe7c0b9b5dae0077fda0c08e2d555d",
-                "shasum": ""
-            },
-            "require": {
-                "kriswallsmith/buzz": "*",
-                "payum/payum": "0.6.*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "doctrine/mongodb-odm": "~1.0@dev",
-                "doctrine/orm": ">=2.3,<2.4-dev",
                 "ext-curl": "*",
-                "ext-pdo_sqlite": "*",
-                "fp/testo": "dev-master",
+                "ext-json": "*",
+                "paypal/sdk-core-php": "1.2.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
-                    "Payum\\Paypal\\ExpressCheckout\\Nvp": "src/"
+                    "PayPal": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache2"
             ],
             "authors": [
                 {
-                    "name": "Kotlyar Maksim",
-                    "email": "kotlyar.maksim@gmail.com"
-                },
-                {
-                    "name": "Payum project",
-                    "homepage": "http://payum.forma-dev.com/"
-                },
-                {
-                    "name": "Community contributions",
-                    "homepage": "https://github.com/Payum/PaypalExpressCheckoutNvp/contributors"
+                    "name": "PayPal",
+                    "homepage": "https://github.com/paypal/rest-api-sdk-php/contributors"
                 }
             ],
-            "description": "Paypal express checkout",
+            "description": "PayPal's PHP SDK for REST APIs",
+            "homepage": "https://github.com/paypal/rest-api-sdk-php",
             "keywords": [
-                "digital goods",
-                "express checkout",
-                "payment",
+                "payments",
                 "paypal",
-                "recurring payment"
+                "rest",
+                "sdk"
             ],
-            "time": "2013-11-19 08:02:01"
+            "time": "2013-03-08 02:11:59"
+        },
+        {
+            "name": "paypal/sdk-core-php",
+            "version": "V1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paypal/sdk-core-php.git",
+                "reference": "06588e5017a6c983168a3bd8e7093d7068974cd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paypal/sdk-core-php/zipball/06588e5017a6c983168a3bd8e7093d7068974cd0",
+                "reference": "06588e5017a6c983168a3bd8e7093d7068974cd0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "PayPal",
+                    "homepage": "https://github.com/paypal/sdk-core-php/contributors"
+                }
+            ],
+            "description": "PayPal Core SDK for PHP",
+            "homepage": "https://github.com/paypal/sdk-core-php",
+            "keywords": [
+                "paypal",
+                "php",
+                "sdk"
+            ],
+            "time": "2013-03-06 13:21:44"
         },
         {
             "name": "payum/payum",
-            "version": "0.6.6",
+            "version": "0.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payum/Payum.git",
-                "reference": "1cbafc001be6153e77c9d8e2ef0576e2159070a6"
+                "reference": "480d08d26bc6563a8247d114a8f24fa7e27c7565"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/Payum/zipball/1cbafc001be6153e77c9d8e2ef0576e2159070a6",
-                "reference": "1cbafc001be6153e77c9d8e2ef0576e2159070a6",
+                "url": "https://api.github.com/repos/Payum/Payum/zipball/480d08d26bc6563a8247d114a8f24fa7e27c7565",
+                "reference": "480d08d26bc6563a8247d114a8f24fa7e27c7565",
                 "shasum": ""
             },
             "require": {
+                "ajbdev/authorizenet-php-api": "1.1.*",
+                "ext-soap": "*",
                 "kriswallsmith/buzz": "*",
+                "omnipay/omnipay": "~1.0",
+                "paypal/rest-api-sdk-php": "0.5.*",
                 "php": ">=5.3.2"
+            },
+            "replace": {
+                "payum/authorize-net-aim": "self.version",
+                "payum/be2bill": "self.version",
+                "payum/core": "self.version",
+                "payum/offline": "self.version",
+                "payum/omnipay-bridge": "self.version",
+                "payum/payex": "self.version",
+                "payum/paypal-express-checkout-nvp": "self.version",
+                "payum/paypal-ipn": "self.version",
+                "payum/paypal-pro-checkout-nvp": "self.version",
+                "payum/paypal-rest": "self.version"
             },
             "require-dev": {
                 "doctrine/mongodb": "1.0.*@dev",
                 "doctrine/mongodb-odm": "1.0.*@dev",
-                "doctrine/orm": "2.*",
+                "doctrine/orm": "2.3.*",
                 "ext-curl": "*",
                 "ext-pdo_sqlite": "*",
-                "fp/testo": "dev-master",
                 "phpunit/phpunit": "3.7.*",
                 "psr/log": "~1.0"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "If you want to store models to mongo doctrin2 ODM",
                 "doctrine/orm": "If you want to store models to database using doctrin2 ORM",
-                "monolog/monolog": "In case you want to use logger",
-                "payum/authorize-net-aim": "If you want to use Authorize.Net AIM payment gateway",
-                "payum/be2bill": "If you want to use be2bill payment gateway",
-                "payum/omnipay-bridge": "If you want to use omnipay's gateways",
-                "payum/paypal-express-checkout-nvp": "If you want to use paypal express checkout, digital goods or recurring payments",
-                "payum/paypal-ipn": "If you want to use paypal instant payment notifications(Paypal IPN)",
-                "payum/paypal-pro-checkout-nvp": "If you want to use paypal pro checkout"
+                "monolog/monolog": "In case you want to use PSR-3 logger"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6-dev"
+                    "dev-master": "0.7-dev"
                 }
             },
             "autoload": {
@@ -2731,7 +2965,7 @@
                     "homepage": "https://github.com/Payum/Payum/contributors"
                 }
             ],
-            "description": "Payment lib",
+            "description": "Domain friendly payment framework. Paypal, payex, authorize.net, be2bill, omnipay, recurring paymens, instant notifications and many more",
             "homepage": "http://payum.forma-dev.com",
             "keywords": [
                 "authorize.net",
@@ -2749,39 +2983,35 @@
                 "paypal rest",
                 "recurring payment"
             ],
-            "time": "2013-11-23 11:13:00"
+            "time": "2014-01-18 16:09:23"
         },
         {
             "name": "payum/payum-bundle",
-            "version": "0.6.2",
+            "version": "0.7.3",
             "target-dir": "Payum/Bundle/PayumBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payum/PayumBundle.git",
-                "reference": "33b82cffa59e855c205eb9ed860bea3fdc6dfe14"
+                "reference": "742d7f812172e23127a681c07e7ec86477ceb73f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/33b82cffa59e855c205eb9ed860bea3fdc6dfe14",
-                "reference": "33b82cffa59e855c205eb9ed860bea3fdc6dfe14",
+                "url": "https://api.github.com/repos/Payum/PayumBundle/zipball/742d7f812172e23127a681c07e7ec86477ceb73f",
+                "reference": "742d7f812172e23127a681c07e7ec86477ceb73f",
                 "shasum": ""
             },
             "require": {
-                "payum/payum": "0.6.*",
+                "payum/core": "0.7.*",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.*"
+                "symfony/framework-bundle": "~2.0",
+                "twig/twig": "*"
             },
             "require-dev": {
                 "doctrine/orm": "*",
-                "fp/testo": "@dev",
-                "payum/authorize-net-aim": "0.6.*",
-                "payum/be2bill": "0.6.*",
-                "payum/offline": "0.6.*",
-                "payum/omnipay-bridge": "0.6.*",
-                "payum/payex": "0.6.*",
-                "payum/paypal-express-checkout-nvp": "0.6.*",
-                "payum/paypal-pro-checkout-nvp": "0.6.*",
-                "phpunit/phpunit": "*"
+                "payum/core": "0.7.*",
+                "phpunit/phpunit": "*",
+                "symfony/browser-kit": "~2.0",
+                "symfony/class-loader": "~2.0"
             },
             "suggest": {
                 "payum/authorize-net-aim": "If you want to use authorize.net gateway",
@@ -2795,7 +3025,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6-dev"
+                    "dev-master": "0.7-dev"
                 }
             },
             "autoload": {
@@ -2809,7 +3039,7 @@
             ],
             "authors": [
                 {
-                    "name": "Maksim Kotlyar",
+                    "name": "Kotlyar Maksim",
                     "email": "kotlyar.maksim@gmail.com"
                 },
                 {
@@ -2821,11 +3051,12 @@
                     "homepage": "https://github.com/Payum/PayumBundle/contributors"
                 }
             ],
-            "description": "The payment bundle integrates payum libs into symfony2 framework",
+            "description": "Rich payment solutions for symfony2. Paypal, payex, authorize.net, be2bill, omnipay, recurring paymens, instant notifications and many more",
             "homepage": "http://payum.forma-dev.com",
             "keywords": [
                 "authorize.net",
                 "be2bill",
+                "instant notifications",
                 "offline",
                 "omnipay",
                 "payex",
@@ -2835,7 +3066,7 @@
                 "paypal pro checkout",
                 "recurring payment"
             ],
-            "time": "2013-10-31 15:04:50"
+            "time": "2014-01-20 08:51:01"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -2888,17 +3119,135 @@
             "time": "2013-01-23 15:16:14"
         },
         {
-            "name": "phpoption/phpoption",
-            "version": "1.3.0",
+            "name": "phpcr/phpcr",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941"
+                "url": "https://github.com/phpcr/phpcr.git",
+                "reference": "f9483968fb77584e47c1dbf2dbc7906447f8c5b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/1c7e8016289d17d83ced49c56d0f266fd0568941",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941",
+                "url": "https://api.github.com/repos/phpcr/phpcr/zipball/f9483968fb77584e47c1dbf2dbc7906447f8c5b1",
+                "reference": "f9483968fb77584e47c1dbf2dbc7906447f8c5b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPCR": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Karsten Dambekalns",
+                    "email": "karsten@typo3.org"
+                }
+            ],
+            "description": "PHP Content Repository interfaces",
+            "homepage": "http://phpcr.github.io",
+            "keywords": [
+                "contentrepository",
+                "phpcr"
+            ],
+            "time": "2013-10-07 15:34:44"
+        },
+        {
+            "name": "phpcr/phpcr-utils",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcr/phpcr-utils.git",
+                "reference": "7920ce3c60cffceb325819bfdf4ebe873df69839"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpcr/phpcr-utils/zipball/7920ce3c60cffceb325819bfdf4ebe873df69839",
+                "reference": "7920ce3c60cffceb325819bfdf4ebe873df69839",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "phpcr/phpcr": "~2.1.0",
+                "symfony/console": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PHPCR\\Util": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Daniel Barsotti",
+                    "email": "daniel.barsotti@liip.ch",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "Nacho Martín",
+                    "email": "nitram.ohcan@gmail.com"
+                }
+            ],
+            "description": "PHP Content Repository implementation independant utilities",
+            "homepage": "http://phpcr.github.com",
+            "keywords": [
+                "cli",
+                "contentrepository",
+                "phpcr"
+            ],
+            "time": "2013-10-10 19:46:30"
+        },
+        {
+            "name": "phpoption/phpoption",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
                 "shasum": ""
             },
             "require": {
@@ -2934,7 +3283,7 @@
                 "php",
                 "type"
             ],
-            "time": "2013-05-19 11:09:35"
+            "time": "2014-01-09 22:37:17"
         },
         {
             "name": "psr/log",
@@ -3019,6 +3368,128 @@
                 "distribution"
             ],
             "time": "2013-08-22 05:04:53"
+        },
+        {
+            "name": "sonata-project/block-bundle",
+            "version": "2.2.8",
+            "target-dir": "Sonata/BlockBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataBlockBundle.git",
+                "reference": "a7838e10007513c51868ce989389c8fa6bda24e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/a7838e10007513c51868ce989389c8fa6bda24e3",
+                "reference": "a7838e10007513c51868ce989389c8fa6bda24e3",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.3",
+                "knplabs/knp-menu-bundle": "~1.1",
+                "sonata-project/core-bundle": "~2.2",
+                "symfony/form": "~2.2",
+                "symfony/http-foundation": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/admin-bundle": "~2.2@dev",
+                "sonata-project/cache-bundle": "~2.1"
+            },
+            "suggest": {
+                "sonata-project/admin-bundle": "~2.2@dev",
+                "sonata-project/cache-bundle": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\BlockBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataBlockBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataBlockBundle",
+            "homepage": "http://sonata-project.org/bundles/block",
+            "keywords": [
+                "block",
+                "sonata"
+            ],
+            "time": "2013-12-13 13:27:55"
+        },
+        {
+            "name": "sonata-project/core-bundle",
+            "version": "2.2.3",
+            "target-dir": "Sonata/CoreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataCoreBundle.git",
+                "reference": "fadf268d4b2c23220b27c33389b6a6132085159e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/fadf268d4b2c23220b27c33389b6a6132085159e",
+                "reference": "fadf268d4b2c23220b27c33389b6a6132085159e",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/config": "~2.0",
+                "symfony/form": "~2.2",
+                "symfony/http-foundation": "~2.2",
+                "symfony/translation": "~2.2",
+                "twig/twig": "~1.12"
+            },
+            "require-dev": {
+                "sonata-project/exporter": "~1.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\CoreBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataCoreBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonataCoreBundle",
+            "homepage": "http://sonata-project.org/bundles/core",
+            "keywords": [
+                "sonata"
+            ],
+            "time": "2014-01-07 11:35:59"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -3130,6 +3601,382 @@
                 "mailer"
             ],
             "time": "2013-12-03 13:33:24"
+        },
+        {
+            "name": "symfony-cmf/block-bundle",
+            "version": "1.0.0",
+            "target-dir": "Symfony/Cmf/Bundle/BlockBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/BlockBundle.git",
+                "reference": "015802c250ba81ae07706e3d142cfdf9987b0dfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/BlockBundle/zipball/015802c250ba81ae07706e3d142cfdf9987b0dfa",
+                "reference": "015802c250ba81ae07706e3d142cfdf9987b0dfa",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/phpcr-bundle": "1.0.*",
+                "doctrine/phpcr-odm": "1.0.*",
+                "php": ">=5.3.3",
+                "sonata-project/block-bundle": "~2.2.4",
+                "symfony-cmf/core-bundle": "1.0.*",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/cache-bundle": "~2.1.3",
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+                "symfony-cmf/testing": "1.0.*",
+                "twig/twig": "~1.11"
+            },
+            "suggest": {
+                "eko/feedbundle": "When using the RssBlock",
+                "liip/imagine-bundle": "When using the ImagineBlock",
+                "sonata-project/cache-bundle": "To add caching support for block loading",
+                "symfony-cmf/media-bundle": "When using the ImagineBlock"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\BlockBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/BlockBundle/contributors"
+                }
+            ],
+            "description": "Symfony CMF Block Bundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "Symfony CMF",
+                "block",
+                "content fragments"
+            ],
+            "time": "2013-10-14 15:32:36"
+        },
+        {
+            "name": "symfony-cmf/content-bundle",
+            "version": "1.0.0",
+            "target-dir": "Symfony/Cmf/Bundle/ContentBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/ContentBundle.git",
+                "reference": "b2ed5d1623ec609691a3f93cb2a7d5c5850bc0d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/ContentBundle/zipball/b2ed5d1623ec609691a3f93cb2a7d5c5850bc0d2",
+                "reference": "b2ed5d1623ec609691a3f93cb2a7d5c5850bc0d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony-cmf/core-bundle": "1.0.*",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/phpcr-bundle": "1.0.*",
+                "doctrine/phpcr-odm": "1.0.*",
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+                "symfony-cmf/menu-bundle": "1.0.*",
+                "symfony-cmf/routing-bundle": "1.1.*",
+                "symfony-cmf/testing": "1.0.*",
+                "symfony/monolog-bundle": "2.2.*"
+            },
+            "suggest": {
+                "doctrine/phpcr-bundle": "To integrate PHPCR-ODM with Symfony",
+                "doctrine/phpcr-odm": "To persist content with the PHP content repository",
+                "friendsofsymfony/rest-bundle": "Improved handling for different output formats",
+                "sonata-project/doctrine-phpcr-admin-bundle": "To provide admin interfaces for the content",
+                "symfony-cmf/menu-bundle": "Have editable menus for content",
+                "symfony-cmf/routing-bundle": "Have editable routes for content"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\ContentBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/ContentBundle/contributors"
+                }
+            ],
+            "description": "Symfony CMF Content Bundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "Symfony CMF"
+            ],
+            "time": "2013-10-14 15:32:15"
+        },
+        {
+            "name": "symfony-cmf/core-bundle",
+            "version": "1.0.1",
+            "target-dir": "Symfony/Cmf/Bundle/CoreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/CoreBundle.git",
+                "reference": "db96ab2e5228b826a0d04ad84182dd1db317b1bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/CoreBundle/zipball/db96ab2e5228b826a0d04ad84182dd1db317b1bd",
+                "reference": "db96ab2e5228b826a0d04ad84182dd1db317b1bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/admin-bundle": "~2.2",
+                "symfony-cmf/routing-bundle": "1.1.*",
+                "symfony-cmf/testing": "1.0.*"
+            },
+            "suggest": {
+                "doctrine/phpcr-bundle": "To be able to use the CMF twig extension, 1.0.*",
+                "doctrine/phpcr-odm": "To be able to use the CMF twig extension, 1.0.*",
+                "sonata-project/admin-bundle": "To be able to enable the publish_workflow_listener extension, ~2.2",
+                "symfony-cmf/routing": "To be able to use the CMF twig extension functions cmf_prev_linkable/cmf_next_linkable, 1.0.*",
+                "symfony-cmf/routing-bundle": "To be able to enable the publish_workflow_listener, 1.0.*",
+                "symfony/security-bundle": "To be able to use the publish workflow system, ~2.1",
+                "symfony/twig-bundle": "To get access to the CMF twig extension, ~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\CoreBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/CoreBundle/contributors"
+                }
+            ],
+            "description": "Symfony CMF Core Bundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "Symfony CMF"
+            ],
+            "time": "2014-01-09 17:18:30"
+        },
+        {
+            "name": "symfony-cmf/menu-bundle",
+            "version": "1.0.0",
+            "target-dir": "Symfony/Cmf/Bundle/MenuBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/MenuBundle.git",
+                "reference": "1f84e1a6a9e3686d85b586953f8a8eb6cad9c143"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/MenuBundle/zipball/1f84e1a6a9e3686d85b586953f8a8eb6cad9c143",
+                "reference": "1f84e1a6a9e3686d85b586953f8a8eb6cad9c143",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/phpcr-bundle": "1.0.*",
+                "doctrine/phpcr-odm": "1.0.*",
+                "knplabs/knp-menu-bundle": "1.1.*",
+                "php": ">=5.3.3",
+                "symfony-cmf/core-bundle": "1.0.*",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+                "symfony-cmf/routing-bundle": "1.1.*",
+                "symfony-cmf/testing": "1.0.*",
+                "symfony/monolog-bundle": "2.2.*"
+            },
+            "suggest": {
+                "sonata-project/doctrine-phpcr-admin-bundle": "if you want to have editing capabilities"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\MenuBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/MenuBundle/contributors"
+                }
+            ],
+            "description": "Symfony CMF Menu Bundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "Symfony CMF",
+                "menu"
+            ],
+            "time": "2013-10-14 15:31:59"
+        },
+        {
+            "name": "symfony-cmf/routing",
+            "version": "1.1.0",
+            "target-dir": "Symfony/Cmf/Component/Routing",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/Routing.git",
+                "reference": "9f8607950cbf888ec678713a35f3d0088857c85f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/9f8607950cbf888ec678713a35f3d0088857c85f",
+                "reference": "9f8607950cbf888ec678713a35f3d0088857c85f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "psr/log": "~1.0",
+                "symfony/http-kernel": "~2.2",
+                "symfony/routing": "~2.2"
+            },
+            "require-dev": {
+                "symfony/config": "~2.2",
+                "symfony/dependency-injection": "~2.0",
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "suggest": {
+                "symfony/event-dispatcher": "DynamicRouter can optionally trigger an event at the start of matching. Minimal version ~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Component\\Routing": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/Routing/contributors"
+                }
+            ],
+            "description": "Extends the Symfony2 routing component for dynamic routes and chaining several routers",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "database",
+                "routing"
+            ],
+            "time": "2013-10-14 15:32:46"
+        },
+        {
+            "name": "symfony-cmf/routing-bundle",
+            "version": "1.1.1",
+            "target-dir": "Symfony/Cmf/Bundle/RoutingBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony-cmf/RoutingBundle.git",
+                "reference": "96d0649c6fb415cb06ed7a689d69e52bcce544dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony-cmf/RoutingBundle/zipball/96d0649c6fb415cb06ed7a689d69e52bcce544dd",
+                "reference": "96d0649c6fb415cb06ed7a689d69e52bcce544dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony-cmf/routing": "1.1.*",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/orm": "2.3.*",
+                "matthiasnoback/symfony-config-test": "0.*",
+                "matthiasnoback/symfony-dependency-injection-test": "0.*",
+                "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
+                "symfony-cmf/core-bundle": "1.0.*",
+                "symfony-cmf/testing": "1.1.*",
+                "symfony/monolog-bundle": "2.2.*"
+            },
+            "suggest": {
+                "doctrine/orm": "To enable support for the ORM entities",
+                "doctrine/phpcr-bundle": "To enable support for the PHPCR ODM documents",
+                "doctrine/phpcr-odm": "To enable support for the PHPCR ODM documents",
+                "sonata-project/doctrine-phpcr-admin-bundle": "To provide an admin interface for the PHPCR ODM documents",
+                "symfony-cmf/content-bundle": "To optionally use the configured value for 'content_basepath' from the CoreBundle",
+                "symfony-cmf/core-bundle": "For compatibility with Symfony 2.2 and easier configuration"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Cmf\\Bundle\\RoutingBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony CMF Community",
+                    "homepage": "https://github.com/symfony-cmf/RoutingBundle/contributors"
+                }
+            ],
+            "description": "Symfony RoutingBundle",
+            "homepage": "http://cmf.symfony.com",
+            "keywords": [
+                "database",
+                "routing"
+            ],
+            "time": "2013-12-16 16:46:20"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3357,16 +4204,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.8",
+            "version": "v2.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b0b421908d569e5024372ded65857707c409e0f7"
+                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0b421908d569e5024372ded65857707c409e0f7",
-                "reference": "b0b421908d569e5024372ded65857707c409e0f7",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
+                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
                 "shasum": ""
             },
             "require": {
@@ -3461,7 +4308,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-12-16 14:36:05"
+            "time": "2014-01-05 01:24:54"
         },
         {
             "name": "twig/extensions",
@@ -3566,12 +4413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
-                "reference": "92b67ee7d7a7a86015ef6949c434807b546e90a3"
+                "reference": "4de0d516f412b1fb0aeea928124d5fe1289f902f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/92b67ee7d7a7a86015ef6949c434807b546e90a3",
-                "reference": "92b67ee7d7a7a86015ef6949c434807b546e90a3",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/4de0d516f412b1fb0aeea928124d5fe1289f902f",
+                "reference": "4de0d516f412b1fb0aeea928124d5fe1289f902f",
                 "shasum": ""
             },
             "require": {
@@ -3611,7 +4458,7 @@
                 "page",
                 "paging"
             ],
-            "time": "2014-01-04 14:59:33"
+            "time": "2014-01-14 11:09:23"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -3655,16 +4502,16 @@
         },
         {
             "name": "willdurand/negotiation",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "1757fc48a77a85df6f7659a16b4522bf8da14e99"
+                "reference": "8b32a05c2cfd41c0b350de5ea03aba8b35dfc13c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/1757fc48a77a85df6f7659a16b4522bf8da14e99",
-                "reference": "1757fc48a77a85df6f7659a16b4522bf8da14e99",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/8b32a05c2cfd41c0b350de5ea03aba8b35dfc13c",
+                "reference": "8b32a05c2cfd41c0b350de5ea03aba8b35dfc13c",
                 "shasum": ""
             },
             "require": {
@@ -3701,7 +4548,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2013-12-14 14:09:01"
+            "time": "2014-01-09 22:50:05"
         }
     ],
     "packages-dev": [
@@ -4475,12 +5322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "876afce1471228330a814ff18e6eb1382a45cc35"
+                "reference": "35e16bf0b8fd055e7d4e8c72cc27f5bf7a505e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/876afce1471228330a814ff18e6eb1382a45cc35",
-                "reference": "876afce1471228330a814ff18e6eb1382a45cc35",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/35e16bf0b8fd055e7d4e8c72cc27f5bf7a505e13",
+                "reference": "35e16bf0b8fd055e7d4e8c72cc27f5bf7a505e13",
                 "shasum": ""
             },
             "require": {
@@ -4492,8 +5339,12 @@
                 "symfony/finder": "~2.1",
                 "symfony/yaml": "~2.1"
             },
+            "require-dev": {
+                "behat/behat": "~2.5",
+                "bossa/phpspec2-expect": "dev-master"
+            },
             "suggest": {
-                "whatthejeff/nyancat-scoreboard": "~1.1 – Enables the Nyan Cat formatter"
+                "phpspec/nyan-formatters": "~1.0 – Adds Nyan formatters"
             },
             "bin": [
                 "bin/phpspec"
@@ -4535,20 +5386,20 @@
                 "testing",
                 "tests"
             ],
-            "time": "2014-01-03 21:48:32"
+            "time": "2014-01-23 15:59:17"
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a"
+                "reference": "fc5ddee4879dfcee788d9cb4b92af9028bc3d7e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/119b07de9c592a0286cd584d6e961903ba096d8a",
-                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/fc5ddee4879dfcee788d9cb4b92af9028bc3d7e8",
+                "reference": "fc5ddee4879dfcee788d9cb4b92af9028bc3d7e8",
                 "shasum": ""
             },
             "require-dev": {
@@ -4590,7 +5441,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2014-01-01 21:15:36"
+            "time": "2014-01-15 15:06:06"
         }
     ],
     "aliases": [
@@ -4598,15 +5449,13 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "athari/yalinqo": 20,
         "doctrine/doctrine-bundle": 20,
         "friendsofsymfony/user-bundle": 20,
-        "knplabs/knp-menu": 20,
-        "knplabs/knp-menu-bundle": 20,
         "knplabs/knp-gaufrette-bundle": 20,
         "knplabs/knp-snappy-bundle": 20,
         "mathiasverraes/money": 20,
         "white-october/pagerfanta-bundle": 20,
+        "pagerfanta/pagerfanta": 20,
         "behat/behat": 0,
         "phpspec/phpspec": 20
     },

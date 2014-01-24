@@ -8,6 +8,8 @@ sylius_backend_shipment_index:
         _controller: sylius.controller.shipment:indexAction
         _sylius:
             template: SyliusWebBundle:Backend/Shipment:index.html.twig
+            method: createFilterPaginator
+            arguments: [$criteria, $sorting, $deleted]
             sortable: true
             sorting:
                 updatedAt: desc
@@ -27,6 +29,7 @@ sylius_backend_shipment_delete:
     defaults:
         _controller: sylius.controller.shipment:deleteAction
         _sylius:
+            template: SyliusWebBundle:Backend/Misc:delete.html.twig
             redirect: sylius_backend_shipment_index
 
 sylius_backend_shipment_show:

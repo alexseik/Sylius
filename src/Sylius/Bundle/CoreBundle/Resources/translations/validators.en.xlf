@@ -14,6 +14,14 @@
         <source>sylius.group.name.not_blank</source>
         <target>Please enter group name.</target>
       </trans-unit>
+      <trans-unit id="3b5beabf59391bccf04d07f802d97a3b" resname="sylius.locale.code.not_blank">
+        <source>sylius.locale.code.not_blank</source>
+        <target>Please enter locale code.</target>
+      </trans-unit>
+      <trans-unit id="2fc0ecd470d4ea046bead3cb291427be" resname="sylius.locale.code.unique">
+        <source>sylius.locale.code.unique</source>
+        <target>This locale already exists.</target>
+      </trans-unit>
       <trans-unit id="0004066cb8a3ad8b40bc84c8131febcc" resname="sylius.user.first_name.max">
         <source>sylius.user.first_name.max</source>
         <target>First name must be not be longer than {{ limit }} characters.</target>
@@ -53,10 +61,6 @@
       <trans-unit id="087a6beb8ec9ff5d48d8d620286faa51" resname="sylius.variant.price.not_blank">
         <source>sylius.variant.price.not_blank</source>
         <target>Please enter the price.</target>
-      </trans-unit>
-      <trans-unit id="037feafe4e225e37e282013f608a4a49" resname="sylius.variant.sku.unique">
-        <source>sylius.variant.sku.unique</source>
-        <target>sylius.variant.sku.unique</target>
       </trans-unit>
       <trans-unit id="381ad7dedffbd02e6f060ea0cb53a38d" resname="sylius_shipping.method.zone.not_blank">
         <source>sylius_shipping.method.zone.not_blank</source>
